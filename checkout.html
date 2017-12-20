@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		h1{
+			text-align: center;
+			background-color: lightgrey;
+			color:rgb(80,80,80);
+			font-style: italic;
+			font-family: georgia;
+		}
+		.div1{
+			font-style: italic;
+			font-family: georgia;
+			position: relative;
+			left: 500px;
+
+		}
+	</style>
+	<script type="text/javascript">
+
+function f()
+{
+if(document.getElementById("cb2").checked == true)
+	window.location='credit.html';
+if(document.getElementById("cb1").checked == true)
+	window.location='cash.html';
+}
+	</script>
+
+</head>
+<body>
+	<h1>Checkout</h1>
+	<div class="div1">
+	<form action="#">
+		<input type="text" name="b" placeholder="First Name" size="50" pattern="[a-zA-Z]+" title="Use only letters" required></input><br><br>
+		<input type="text" placeholder="Last Name" size="50" pattern="[a-zA-Z]+" title="Use only letters" required></input><br><br>
+		<input type="email" placeholder="Email" size="50" pattern="\b[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[A-Za-z]{2,}\b" title="Compulsorily use @ and . symbols" required></input><br><br>
+		<input type="text" placeholder="Contact phone" size="50" pattern="[0-9]{10}" title="use digits only with length=10" required></input><br><br>
+		<textarea rows="5" cols="51.5" placeholder="Address" pattern="[a-zA-Z0-9\s]+" title="Use only letters" required></textarea><br><br>
+		<input type="text" placeholder="City" size="50" pattern="[a-zA-Z]+" title="Use only letters" required></input><br><br>
+		<input type="text" placeholder="State" size="50" pattern="[a-zA-Z]+" title="Use only letters" required></input><br><br>
+		<input type="text" placeholder="Zipcode" size="50" pattern="[0-9]{4,6}" title="Use only digits" required></input><br><br>
+		<label>Payment type:</label><br>
+		<input type="radio" name="pay" id="cb1">Cash on delivery</input><br>
+		<input type="radio" name="pay" id="cb2">Credit/Debit card
+		</input><br><br>
+
+
+		<button type="submit" onclick="f()">Submit</button>
+</form>
+		
+</form>
+</div>
+</body>
+</html>
